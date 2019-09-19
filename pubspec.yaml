@@ -28,11 +28,9 @@ dependencies:
     path:
       lib/apps/miniapp1/
 
-  # miniapp_on_git:
-  #   git:
-  #     url: git://github.com/miniapp_on_git/miniapp_on_git.git
-  #     # if package isn't on root, specifty path
-  #     path: packages/package1
+  miniapp2:
+    git:
+      url: https://github.com/DarksightKellar/flutter-miniapp2.git
 
 dev_dependencies:
   flutter_test:

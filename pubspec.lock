@@ -102,6 +102,15 @@ packages:
       relative: true
     source: path
     version: "0.0.1"
+  miniapp2:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: HEAD
+      resolved-ref: f724cf37bb871eabd58d8ab629d1f74b187cc6ea
+      url: "https://github.com/DarksightKellar/flutter-miniapp2.git"
+    source: git
+    version: "0.0.1"
   path:
     dependency: transitive
     description:

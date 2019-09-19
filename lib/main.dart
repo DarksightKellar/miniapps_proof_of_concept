@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:miniapp1/miniapp1.dart';
+import 'package:miniapp2/miniapp2.dart';
 
 void main() => runApp(MyApp());
 
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => MyHomePage(title: 'Mini App Home Page'),
         '/miniapp1': (context) => MiniApp1(),
+        '/miniapp2': (context) => MiniApp2()
       },
     );
   }
