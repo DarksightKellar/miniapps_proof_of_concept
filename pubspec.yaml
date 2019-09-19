@@ -24,6 +24,16 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
 
+  miniapp1:
+    path:
+      lib/apps/miniapp1/
+
+  # miniapp_on_git:
+  #   git:
+  #     url: git://github.com/miniapp_on_git/miniapp_on_git.git
+  #     # if package isn't on root, specifty path
+  #     path: packages/package1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

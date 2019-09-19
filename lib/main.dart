@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:miniapp1/miniapp1.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,7 +12,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Mini App Home Page'),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => MyHomePage(title: 'Mini App Home Page'),
+        '/miniapp1': (context) => MiniApp1(),
+      },
     );
   }
 }
@@ -26,14 +31,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,12 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: FlatButton(
                 focusColor: Colors.black,
                 onPressed: () {
-                  var alert = AlertDialog(content: Text('hi will open mini app soon'));
-                  showDialog(
-                      context: context,
-                      builder: (context) {
-                        return alert;
-                      });
+                  Navigator.pushNamed(context, '/miniapp${index + 1}');
                 },
                 child: Text(
                   'App $index',
