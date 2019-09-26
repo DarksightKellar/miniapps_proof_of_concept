@@ -10,13 +10,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Mini App POC',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData(primarySwatch: Colors.blue),
       initialRoute: '/',
       routes: {
         '/': (context) => MyHomePage(title: 'Mini App Home Page'),
-        '/miniapp1': (context) => MiniApp1(),
+        '/miniapp1': (context) => MiniApp1(context),
         '/miniapp2': (context) => MiniApp2()
       },
     );
@@ -34,18 +32,18 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   Widget buildAppIcon(BuildContext context, String route, String appName) {
-            return Center(
-              child: FlatButton(
-                focusColor: Colors.black,
-                onPressed: () {
+    return Center(
+      child: FlatButton(
+        focusColor: Colors.black,
+        onPressed: () {
           Navigator.pushNamed(context, route);
-                },
-                child: Text(
+        },
+        child: Text(
           appName,
-                  style: Theme.of(context).textTheme.headline,
-                ),
-              ),
-            );
+          style: Theme.of(context).textTheme.headline,
+        ),
+      ),
+    );
   }
 
   @override

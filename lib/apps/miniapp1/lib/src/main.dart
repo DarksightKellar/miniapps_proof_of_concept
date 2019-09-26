@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
-// void main() => runApp(MiniApp1());
-
 class AppRoot extends StatelessWidget {
+  final BuildContext _rootContext;
+
+  AppRoot({rootContext}) : _rootContext = rootContext;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
