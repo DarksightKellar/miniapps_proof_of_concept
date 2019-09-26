@@ -33,30 +33,29 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      // appBar: AppBar(
-      //   title: Text(widget.title),
-      // ),
-      body: Center(
-        child: GridView.count(
-          crossAxisCount: 2,
-          children: List.generate(3, (index) {
+  Widget buildAppIcon(BuildContext context, String route, String appName) {
             return Center(
               child: FlatButton(
                 focusColor: Colors.black,
                 onPressed: () {
-                  Navigator.pushNamed(context, '/miniapp${index + 1}');
+          Navigator.pushNamed(context, route);
                 },
                 child: Text(
-                  'App $index',
+          appName,
                   style: Theme.of(context).textTheme.headline,
                 ),
               ),
             );
-          }),
-        ),
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: GridView.count(crossAxisCount: 2, children: [
+          buildAppIcon(context, '/miniapp1', MiniApp1.appName),
+          buildAppIcon(context, '/miniapp2', 'App 2'),
+        ]),
       ),
     );
   }

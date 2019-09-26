@@ -11,8 +11,5 @@ class MiniApp1 extends StatelessWidget {
   }
 }
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
+  static String appName = 'Mini App 1';
 }
